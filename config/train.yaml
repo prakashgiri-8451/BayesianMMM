@@ -13,7 +13,7 @@ MEDIA_NMS: #must be in same order as in mmm dataset
   - TRADE_COST_TRADE_TPR_FEATURE_DISPLAY
   - TRADE_COST_TRADE_TPRONLY
  
-CTRL_NMS: ["trend", "weekly","monthly", "holidays", "yearly" ]
+CTRL_NMS: ["trend", "monthly", "holidays", "yearly" ]
 DATE_NM: "ds"
 TARGET_NM: "SALES"
 
