@@ -57,4 +57,4 @@ class CarryoverVisualizor:
                 )
             )
 
-        fig.write_html("results/plot/carryover_%s.html" % name, auto_open=False)
+        fig.write_html("/dbfs/BayesianMMM/results/plot/carryover_%s.html" % name, auto_open=False)

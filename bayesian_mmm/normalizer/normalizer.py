@@ -78,10 +78,10 @@ class Normalizer:
 
     def save(self, name: str):
 
-        with open("./results/normalizer/scaler_%s.pkl" % name, "wb") as f:
+        with open("/dbfs/BayesianMMM/results/normalizer/scaler_%s.pkl" % name, "wb") as f:
             pkl_dump(self.__scaler, f)
 
-        with open("./results/normalizer/args_%s.json" % name, "w") as f:
+        with open("/dbfs/BayesianMMM/results/normalizer/args_%s.json" % name, "w") as f:
             json_dump({
                 "transfo_nm": self.__transfo_nm,
                 "scaler_nm": self.__scaler_nm
@@ -95,10 +95,10 @@ class Normalizer:
 
 def load_normalizer(name: str) -> Normalizer:
 
-    with open("./results/normalizer/scaler_%s.pkl" % name, "rb") as f:
+    with open("/dbfs/BayesianMMM/results/normalizer/scaler_%s.pkl" % name, "rb") as f:
             scaler = pkl_load(f)
 
-    with open("./results/normalizer/args_%s.json" % name, "r") as f:
+    with open("/dbfs/BayesianMMM/results/normalizer/args_%s.json" % name, "r") as f:
         init_args = json_load(f)
 
     normalizer = Normalizer(**init_args)

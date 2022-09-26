@@ -26,7 +26,7 @@ class ContributionCalculator(InferenceMachine):
 
     def write_results(self, name: str) -> None:
 
-        self.__contributions.to_csv("results/contributions_%s.csv" % name, index=False)
+        self.__contributions.to_csv("/dbfs/BayesianMMM/results/contributions_%s.csv" % name, index=False)
 
     def get_results(self) -> None:
 

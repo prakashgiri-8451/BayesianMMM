@@ -45,4 +45,4 @@ class DiminushingReturnsVisualizor:
                 )
             )
 
-        fig.write_html("results/plot/diminushing_returns_%s.html" % name, auto_open=False)
+        fig.write_html("/dbfs/BayesianMMM/results/plot/diminushing_returns_%s.html" % name, auto_open=False)

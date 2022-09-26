@@ -1,4 +1,4 @@
-DATA_SOURCE_PATH: "./data/mmm.csv"
+DATA_SOURCE_PATH: "/dbfs/BayesianMMM/data/mmm.csv"
 
 EXPERIMENT_NM: "demo"
 

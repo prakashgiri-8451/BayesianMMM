@@ -109,7 +109,7 @@ class Evaluator:
             )
         )
 
-        fig.write_html("./results/plot/true_vs_pred_%s.html" % name, auto_open=False)
+        fig.write_html("/dbfs/BayesianMMM/results/plot/true_vs_pred_%s.html" % name, auto_open=False)
 
 
 

@@ -35,7 +35,7 @@ class ContributionVisualizor:
 
         self.__fig.update_layout(legend = dict(orientation = "h"))
 
-        self.__fig.write_html("results/plot/contribution_analysis_%s.html" % name, auto_open=False)
+        self.__fig.write_html("/dbfs/BayesianMMM/results/plot/contribution_analysis_%s.html" % name, auto_open=False)
 
     def __get_incremental_to_spends_ratio(self) -> Series:
 
