@@ -1,0 +1,37 @@
+DATA_SOURCE_PATH: "/dbfs/BayesianMMM/data/Oreo.csv"
+
+EXPERIMENT_NM: "Oreo"
+
+MEDIA_NMS: #must be in same order as in mmm dataset
+  - KPM_COST_EMOD
+  - PLA_AD_SPEND_PLA
+  - TOA_AD_SPEND_TOA
+  - REDEMPTION_COST_LOYAL_CUSTOMER_MAILER
+  - REDEMPTION_COST_MY_MAGAZINE
+  - TRADE_COST_TRADE_TPR_DISPLAY
+  - TRADE_COST_TRADE_TPR_FEATURE
+  - TRADE_COST_TRADE_TPR_FEATURE_DISPLAY
+  - TRADE_COST_TRADE_TPRONLY
+ 
+CTRL_NMS: ["trend", "weekly","monthly", "holidays", "yearly" ]
+DATE_NM: "ds"
+TARGET_NM: "SALES"
+
+NORMALIZATION:
+  PREDICTORS:
+    transfo_nm: null
+    scaler_nm: "max_abs"
+  TARGET:
+    transfo_nm: null
+    scaler_nm: "max_abs"
+
+MAX_LAG: 13
+CARRYOVER_TRANSFO_NM: "adstock"
+DIMINUSHING_RETURNS_TRANSFO_NM: "reach"
+
+SAMPLING_N_ITER: 2000
+SAMPLING_N_PROCESSORS: 3
+
+PARAMETER_ESTIMATOR_NM: "median"
+
+NB_TEST_OBS: 20
