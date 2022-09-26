@@ -42,7 +42,7 @@ def check_ndarray_is_tensor(array: ndarray, var_nm: str) -> None:
 
 def load_config(name: str) -> Dict:
 
-    with open("config/%s.yaml" % name, "r") as f:
+    with open("/dbfs/BayesianMMM/config/%s.yaml" % name, "r") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
     
     return config
