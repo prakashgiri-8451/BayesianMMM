@@ -52,7 +52,7 @@ class Evaluator:
 
         self.__compute_performance()
 
-        with open("./results/performance_%s.json" % name, "w") as f:
+        with open("/dbfs/BayesianMMM/results/performance_%s.json" % name, "w") as f:
             dump(self.__performance, f)
 
 
@@ -85,7 +85,7 @@ class Evaluator:
             )
         pred_vs_true.index.rename("dt", inplace=True)
             
-        pred_vs_true.to_csv("./results/prediction_%s.csv" % name)
+        pred_vs_true.to_csv("/dbfs/BayesianMMM/results/prediction_%s.csv" % name)
 
     def write_fig_true_vs_pred(self, name: str) -> None:
 
