@@ -76,13 +76,13 @@ class InferenceMachine:
 
 def save_inference_machine(inference_machine: InferenceMachine, name: str) -> None:
 
-    with open("./results/inference_machine/%s.pkl" % name, "wb") as f:
+    with open("/dbfs/BayesianMMM/results/inference_machine/%s.pkl" % name, "wb") as f:
         dump(inference_machine, f)
 
 
 def load_inference_machine(name: str) -> InferenceMachine:
 
-    with open("./results/inference_machine/%s.pkl" % name, "rb") as f:
+    with open("/dbfs/BayesianMMM/results/inference_machine/%s.pkl" % name, "rb") as f:
         inference_machine = load(f)
     
     return inference_machine
