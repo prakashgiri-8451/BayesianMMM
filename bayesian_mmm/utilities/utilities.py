@@ -40,9 +40,9 @@ def check_ndarray_is_tensor(array: ndarray, var_nm: str) -> None:
         raise ValueError("%s must be 3 dimensional" % var_nm)
 
 
-def load_config(name: str) -> Dict:
+def load_config(filepath: str) -> Dict:
 
-    with open("/dbfs/BayesianMMM/config/%s.yaml" % name, "r") as f:
+    with open(filepath, "r") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)
     
     return config
