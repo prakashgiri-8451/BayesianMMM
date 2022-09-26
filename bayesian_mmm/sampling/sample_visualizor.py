@@ -16,7 +16,7 @@ class SampleVisualizor:
     def write_fig(self, sample: Dict, name:str) -> None:
         
         self.__create_fig(sample)
-        self.__fig.write_html("results/plot/sample_"+name+".html", auto_open=False)
+        self.__fig.write_html("/dbfs/BayesianMMM/results/plot/sample_"+name+".html", auto_open=False)
 
     def __create_fig(self, sample: Dict) -> None:
 
